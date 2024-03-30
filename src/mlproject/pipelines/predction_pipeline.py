@@ -20,7 +20,7 @@ class PredictPipeline:
             
             pred=model.predict(features)
 
-            return int(pred)
+            return pred
 
         except Exception as e:
             raise CustomException(e,sys)
