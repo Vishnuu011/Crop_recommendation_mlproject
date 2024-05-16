@@ -21,8 +21,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score
 
 
-#def load_dataframe(path:str, file_name:str):
-    #return pd.read_csv(Path(os.path.join(path, file_name)))
+
 
 def save_object(file_path, obj):
     try:
@@ -50,8 +49,8 @@ def evaluate_models(X_train, y_train,X_test,y_test,models):
             # Predict Testing data
             y_test_pred =model.predict(X_test)
 
-            # Get R2 scores for train and test data
-            #train_model_score = r2_score(ytrain,y_train_pred)
+            # Get accuracy scores for train and test data
+            
             test_model_score = accuracy_score(y_test,y_test_pred)
 
             report[list(models.keys())[i]] =  test_model_score
